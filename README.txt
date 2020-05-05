@@ -9,13 +9,13 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Set a minimum purchase amount for Woocommerce orders.  Displays a notification on both the cart and checkout pages and prevents orders below the set amount.
+Set a minimum purchase amount for Woocommerce orders.  Displays a validation message on both the cart and checkout pages and prevents orders below the set amount.
 
 == Description ==
 
 The **Woocommerce Minimum Order Amount** plugin allows you to set a minimum purchase amount for Woocommerce orders.  The minimum amount can be based on the cart's subtotal or total (including fees and taxes).  The plugin displays a customizable error notification on both the cart and checkout pages. It also prevents an order from being submitted until the threshold amount has been satisfied.
 
-The cart and checkout messages can be customized in the Woocommerce settings.
+The cart and checkout validation messages can be customized in the Woocommerce settings.
 
 
 
@@ -43,11 +43,8 @@ You can reach us at https://refactorr.com/contact-us/
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. This is the plugin admin page found in 'WooCommerce -> Settings' in the 'Minimum Order Amount' tab.
+2. This is a screenshot of how the default validation message appears in the Cart.
 
 == Changelog ==
 
