@@ -13,7 +13,7 @@
  * @package           Woo_Min_Order_Amount
  *
  * @wordpress-plugin
- * Plugin Name:       Woocommerce Minimum Order Amount
+ * Plugin Name:       Minimum Order Amount for Checkout
  * Plugin URI:        https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * Description:       Set a minimum order amount for Woocommerce orders.  Shows a notice in cart and validates at checkout before order can be placed.
  * Version:           1.0.0

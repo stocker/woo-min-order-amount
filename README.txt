@@ -1,4 +1,4 @@
-=== Woocommerce Minimum Order Amount ===
+=== Minimum Order Amount for Checkout ===
 Contributors: sbstocker
 Donate link: https://refactorr.com/donate/
 Tags: woocommerce, order, order amount, order total, minimum order, minimum purchase, cart, checkout, woo
@@ -13,7 +13,7 @@ Set a minimum purchase amount for Woocommerce orders.  Displays a validation mes
 
 == Description ==
 
-The **Woocommerce Minimum Order Amount** plugin allows you to set a minimum purchase amount for Woocommerce orders.  The minimum amount can be based on the cart's subtotal or total (including fees and taxes).  The plugin displays a customizable error notification on both the cart and checkout pages. It also prevents an order from being submitted until the threshold amount has been satisfied.
+The **Minimum Order Amount for Checkout** plugin allows you to set a minimum purchase amount for Woocommerce orders.  The minimum amount can be based on the cart's subtotal or total (including fees and taxes).  The plugin displays a customizable error notification on both the cart and checkout pages. It also prevents an order from being submitted until the threshold amount has been satisfied.
 
 The cart and checkout validation messages can be customized in the Woocommerce settings.
 
