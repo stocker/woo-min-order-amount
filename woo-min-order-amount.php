@@ -8,13 +8,13 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://github.com/stocker
+ * @link              https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * @since             1.0.0
  * @package           Woo_Min_Order_Amount
  *
  * @wordpress-plugin
  * Plugin Name:       Woocommerce Minimum Order Amount
- * Plugin URI:        https://github.com/stocker/woo-min-order-amount
+ * Plugin URI:        https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * Description:       Set a minimum order amount for Woocommerce orders.  Shows a notice in cart and validates at checkout before order can be placed.
  * Version:           1.0.0
  * Author:            Scott Stocker

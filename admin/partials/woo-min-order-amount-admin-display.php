@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://github.com/stocker
+ * @link       https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * @since      1.0.0
  *
  * @package    Woo_Min_Order_Amount

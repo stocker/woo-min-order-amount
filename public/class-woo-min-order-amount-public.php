@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://github.com/stocker
+ * @link       https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * @since      1.0.0
  *
  * @package    Woo_Min_Order_Amount
@@ -18,7 +18,7 @@
  *
  * @package    Woo_Min_Order_Amount
  * @subpackage Woo_Min_Order_Amount/public
- * @author     Scott Stocker <scott@refactorr. om>
+ * @author     Scott Stocker <scott@refactorr.com>
  */
 class Woo_Min_Order_Amount_Public
 {
@@ -100,15 +100,19 @@ class Woo_Min_Order_Amount_Public
 
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-min-order-amount-public.js', array('jquery'), $this->version, false);
 	}
+
+	/**
+	 * Display the validation message on the cart or checkout page.
+	 */
+
 	public function woo_min_order_amount_cart()
 	{
 		$minimum = get_option('woo_min_order_amount_value');
 		$trigger_value = get_option('woo_min_order_trigger_value');
 		$cart_value = 0;
-		if ('subtotal' == $trigger_value ){
+		if ('subtotal' == $trigger_value) {
 			$cart_value =  wc()->cart->subtotal;
-		}
-		else {
+		} else {
 			$cart_value =  wc()->cart->total;
 		}
 
@@ -121,22 +125,24 @@ class Woo_Min_Order_Amount_Public
 		}
 	}
 
+	/**
+	 * Display the validation message when validating the order on the checkout page.
+	 */
 	public function woo_min_order_amount_checkout($fields, $errors)
 	{
 		$minimum = get_option('woo_min_order_amount_value');
 		$trigger_value = get_option('woo_min_order_trigger_value');
 		$cart_value = 0;
-		if ('subtotal' == $trigger_value){
+		if ('subtotal' == $trigger_value) {
 			$cart_value =  wc()->cart->subtotal;
-		}
-		else {
+		} else {
 			$cart_value =  wc()->cart->total;
 		}
 		if ($minimum && ($cart_value < $minimum)) {
 			$errors->add('validation', get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value));
 		}
 	}
-	
+
 	private function get_message($message, $minimum, $trigger_value, $cart_total)
 	{
 		$price_format = get_woocommerce_price_format();

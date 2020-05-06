@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://github.com/stocker
+ * @link       https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * @since      1.0.0
  *
  * @package    Woo_Min_Order_Amount
@@ -18,7 +18,7 @@
  *
  * @package    Woo_Min_Order_Amount
  * @subpackage Woo_Min_Order_Amount/admin
- * @author     Scott Stocker <scott@refactorr. om>
+ * @author     Scott Stocker <scott@refactorr.com>
  */
 class Woo_Min_Order_Amount_Admin
 {
@@ -101,6 +101,11 @@ class Woo_Min_Order_Amount_Admin
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woo-min-order-amount-admin.js', array('jquery'), $this->version, false);
 	}
 
+	/**
+	 * Add the "Minimum Order Amount tab on Woocommerce settings page.
+	 * 
+	 */
+
 	public static function add_settings_tab($settings_tabs)
 	{
 		$settings_tabs['settings_tab_min_order'] = __('Minimum Order Amount', 'woocommerce-settings-tab-min-order');
@@ -131,7 +136,7 @@ class Woo_Min_Order_Amount_Admin
 	}
 
 	/**
-	 * Get all the settings for this plugin for @see woocommerce_admin_fields() function.
+	 * Build all the settings options for this plugin for @see woocommerce_admin_fields() function.
 	 *
 	 * @return array Array of settings for @see woocommerce_admin_fields() function.
 	 */

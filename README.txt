@@ -1,6 +1,6 @@
 === Woocommerce Minimum Order Amount ===
 Contributors: sbstocker
-Donate link: https://github.com/stocker
+Donate link: https://refactorr.com/donate/
 Tags: woocommerce, order, order amount, order total, minimum order, minimum purchase, cart, checkout, woo
 Requires at least: 3.0.1
 Tested up to: 5.4

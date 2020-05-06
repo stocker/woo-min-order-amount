@@ -31,7 +31,6 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	delete_option('woo_min_order_amount_value');
 	delete_option('woo_min_order_amount_cart_message');
 	delete_option('woo_min_order_amount_checkout_message');
-	delete_option('woo_min_order_amount_currency_display_type');
-	delete_option('woo_min_order_amount_shop_message');
+	delete_option('woo_min_order_amount_trigger_value');
 	exit;
 }

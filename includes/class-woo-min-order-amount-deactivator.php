@@ -3,7 +3,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       https://github.com/stocker
+ * @link       https://refactorr.com/wordpress-plugins/woocommerce-minimum-order-amount/
  * @since      1.0.0
  *
  * @package    Woo_Min_Order_Amount
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Woo_Min_Order_Amount
  * @subpackage Woo_Min_Order_Amount/includes
- * @author     Scott Stocker <scott@refactorr. om>
+ * @author     Scott Stocker <scott@refactorr.com>
  */
 class Woo_Min_Order_Amount_Deactivator {
 
