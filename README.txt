@@ -48,8 +48,9 @@ You can reach us at https://refactorr.com/contact-us/
 
 == Changelog ==
 
+= 1.0.1 = 
+* Fix 'uninstall' function to properly clean up when plugin is removed.
+
 = 1.0 =
 * Initial release.
 
-= 1.0.1 = 
-* Fix 'uninstall' function to properly clean up when plugin is removed.
