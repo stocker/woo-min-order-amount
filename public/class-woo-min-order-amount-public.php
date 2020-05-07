@@ -139,7 +139,7 @@ class Woo_Min_Order_Amount_Public
 			$cart_value =  wc()->cart->total;
 		}
 		if ($minimum && ($cart_value < $minimum)) {
-			$errors->add('validation', get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value));
+			$errors->add('validation', $this->get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value));
 		}
 	}
 
