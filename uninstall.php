@@ -27,10 +27,11 @@
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	delete_option('woo_min_order_amount_activate');
-	delete_option('woo_min_order_amount_value');
-	delete_option('woo_min_order_amount_cart_message');
-	delete_option('woo_min_order_amount_checkout_message');
-	delete_option('woo_min_order_amount_trigger_value');
 	exit;
 }
+
+// delete plugin options
+delete_option('woo_min_order_amount_value');
+delete_option('woo_min_order_amount_cart_message');
+delete_option('woo_min_order_amount_checkout_message');
+delete_option('woo_min_order_trigger_value');
