@@ -4,7 +4,7 @@ Donate link: https://refactorr.com/donate/
 Tags: woocommerce, order, order amount, order total, minimum order, minimum purchase, cart, checkout, woo
 Requires at least: 3.0.1
 Tested up to: 5.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,9 @@ You can reach us at https://refactorr.com/contact-us/
 2. This is a screenshot of how the default validation message appears in the Cart.
 
 == Changelog ==
+
+= 1.0.2 = 
+* Bug fix for validation message in checkout process.
 
 = 1.0.1 = 
 * Fix 'uninstall' function to properly clean up when plugin is removed.
