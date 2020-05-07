@@ -161,7 +161,7 @@ class Woo_Min_Order_Amount_Public
 			$currency_symbol,
 			number_format($minimum, $num_decimals, $decimal_separator, $thousand_separator),
 			$currency_symbol,
-			number_format($cart_total, $num_decimals, $decimal_separator, $thousand_separator),
+			number_format($cart_total, $num_decimals, $decimal_separator, $thousand_separator)
 		);
 	}
 }
