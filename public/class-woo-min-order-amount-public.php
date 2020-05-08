@@ -109,6 +109,7 @@ class Woo_Min_Order_Amount_Public
 	{
 		$minimum = get_option('woo_min_order_amount_value');
 		$trigger_value = get_option('woo_min_order_trigger_value');
+		$shop_link = get_option('woo_min_order_amount_shop_link');
 		$cart_value = 0;
 		if ('subtotal' == $trigger_value) {
 			$cart_value =  wc()->cart->subtotal;
@@ -118,9 +119,9 @@ class Woo_Min_Order_Amount_Public
 
 		if ($minimum && ($cart_value < $minimum)) {
 			if (is_cart()) { // get cart message
-				wc_print_notice($this->get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value),	'error');
+				wc_print_notice($this->get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value, $shop_link),	'error');
 			} else { // get checkout message
-				wc_print_notice($this->get_message(get_option('woo_min_order_amount_checkout_message'), $minimum, $trigger_value, $cart_value),	'error');
+				wc_print_notice($this->get_message(get_option('woo_min_order_amount_checkout_message'), $minimum, $trigger_value, $cart_value, $shop_link),	'error');
 			}
 		}
 	}
@@ -132,6 +133,7 @@ class Woo_Min_Order_Amount_Public
 	{
 		$minimum = get_option('woo_min_order_amount_value');
 		$trigger_value = get_option('woo_min_order_trigger_value');
+		$shop_link = get_option('woo_min_order_amount_shop_link');
 		$cart_value = 0;
 		if ('subtotal' == $trigger_value) {
 			$cart_value =  wc()->cart->subtotal;
@@ -139,11 +141,11 @@ class Woo_Min_Order_Amount_Public
 			$cart_value =  wc()->cart->total;
 		}
 		if ($minimum && ($cart_value < $minimum)) {
-			$errors->add('validation', $this->get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value));
+			$errors->add('validation', $this->get_message(get_option('woo_min_order_amount_cart_message'), $minimum, $trigger_value, $cart_value, $shop_link));
 		}
 	}
 
-	private function get_message($message, $minimum, $trigger_value, $cart_total)
+	private function get_message($message, $minimum, $trigger_value, $cart_total, $shop_link)
 	{
 		$price_format = get_woocommerce_price_format();
 		$price_format_current = str_replace(array('1', '2'), array('3', '4'), $price_format);
@@ -155,6 +157,10 @@ class Woo_Min_Order_Amount_Public
 		$parsedMessage = str_replace('[minimum]', $price_format, $message);
 		$parsedMessage = str_replace('[total]', $trigger_value, $parsedMessage);
 		$parsedMessage = str_replace('[current]', $price_format_current, $parsedMessage);
+		
+		if ($shop_link){
+			$parsedMessage .= '&nbsp;&nbsp;  [<a href=\"' . $shop_link . '\" style="text-decoration: underline">Continue shopping</a>]';
+		}
 
 		return sprintf(
 			$parsedMessage,

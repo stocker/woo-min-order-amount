@@ -173,7 +173,7 @@ class Woo_Min_Order_Amount_Admin
 			),
 			'cart_message' => array(
 				'title'    => __('Cart message', 'woocommerce-settings-tab-min-order'),
-				'desc'     => __('Display this warning in the CART.  Replacements: [minimum] = order minimum;  [current] = the cart\'s current total.', 'woocommerce-settings-tab-min-order'),
+				'desc'     => __('Display this warning in CART. Replacements: [minimum] = order minimum; [current] = current total. [total] = total or subtotal.', 'woocommerce-settings-tab-min-order'),
 				'id'       => 'woo_min_order_amount_cart_message',
 				'default'  => 'A minimum order of [minimum] is required. Your cart\'s current [total] is [current].',
 				'type'     => 'text',
@@ -182,9 +182,18 @@ class Woo_Min_Order_Amount_Admin
 			),
 			'checkout_message' => array(
 				'title'    => __('Checkout message', 'woocommerce-settings-tab-min-order'),
-				'desc'     => __('Display this warning at CHECKOUT.  Replacements: [minimum] = order minimum;  [current] = the cart\'s current total.', 'woocommerce-settings-tab-min-order'),
+				'desc'     => __('Display this warning at CHECKOUT. Replacements: [minimum] = order minimum; [current] = current total. [total] = total or subtotal.', 'woocommerce-settings-tab-min-order'),
 				'id'       => 'woo_min_order_amount_checkout_message',
 				'default'  => 'A minimum order of [minimum] is required. Your cart\'s current [total] is [current].',
+				'type'     => 'text',
+				'desc_tip' => true,
+				'css'      => 'width:100%; max-width: 800px;',
+			),
+			'continue_shopping_link' => array(
+				'title'    => __('Continue Shopping Link', 'woocommerce-settings-tab-min-order'),
+				'desc'     => __('URL for Continue Shopping link.  Leave blank for no link.', 'woocommerce-settings-tab-min-order'),
+				'id'       => 'woo_min_order_amount_shop_link',
+				'default'  => '/shop',
 				'type'     => 'text',
 				'desc_tip' => true,
 				'css'      => 'width:100%; max-width: 800px;',
