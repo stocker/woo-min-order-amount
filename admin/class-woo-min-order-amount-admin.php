@@ -198,6 +198,15 @@ class Woo_Min_Order_Amount_Admin
 				'desc_tip' => true,
 				'css'      => 'width:100%; max-width: 800px;',
 			),
+			'continue_shopping_link_text' => array(
+				'title'    => __('Continue Shopping Link Text', 'woocommerce-settings-tab-min-order'),
+				'desc'     => __('Text for Continue Shopping link.', 'woocommerce-settings-tab-min-order'),
+				'id'       => 'woo_min_order_amount_shop_link_text',
+				'default'  => 'Continue Shopping',
+				'type'     => 'text',
+				'desc_tip' => true,
+				'css'      => 'width:100%; max-width: 800px;',
+			),
 
 			'section_end' => array(
 				'type' => 'sectionend',
